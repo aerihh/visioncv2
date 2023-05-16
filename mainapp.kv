@@ -1,0 +1,93 @@
+#kivy 2.1.0
+<ui>:
+    MDScreen:
+        name: 'screen_principal'
+        md_bg_color:0,.5,.5,.5
+        MDBoxLayout:
+            orientation:'vertical'
+            MDBoxLayout:
+                size_hint: 1, .2
+                orientation:'horizontal'
+                padding: '10dp'
+                MDCard:
+                    radius:'10dp'
+                    padding:'10dp'
+                    line_color: 1,0,1,1 
+                
+                    MDLabel:
+                        text: 'Find My Spot'
+                        halign:'center'
+                        pos_hint: {'center_y': 0.5}    
+                    Button:
+                        id: button1
+                        text: "Refresh"
+                        background_color: (0,0.2,1,1)
+
+            MDBoxLayout:
+                GridLayout:
+                    rows: 1
+                    Image:
+                        source: 'Foto_estacionamiento.jpg'
+                        size: self.texture_size
+            BoxLayout:
+                size: root.size
+                GridLayout:
+                    rows: 2
+                    cols: 7
+                    
+                    Button:
+                        id: button1
+                        text: "F1"
+                        background_color: root.mat[0]
+                    Button:
+                        id: button2
+                        text: "F2"
+                        background_color: root.mat[1]
+                    Button:
+                        id: button3
+                        text: "F3"
+                        background_color: root.mat[2]
+                    Button:
+                        id: button4
+                        text: "F4"
+                        background_color: root.mat[3]
+                    Button:
+                        id: button5
+                        text: "F5"
+                        background_color: root.mat[4]
+                    Button:
+                        id: button6
+                        text: "F5"
+                        background_color: root.mat[5]
+                    Button:
+                        id: button7
+                        text: "F7"
+                        background_color: root.mat[6]
+                    Button:
+                        id: button8
+                        text: "F8"
+                        background_color: root.mat[7]
+                    Button:
+                        id: button9
+                        text: "F9"
+                        background_color: root.mat[8]
+                    Button:
+                        id: button10
+                        text: "F10"
+                        background_color: root.mat[9]
+                    Button:
+                        id: button11
+                        text: "F11"
+                        background_color: root.mat[10]
+                    Button:
+                        id: button12
+                        text: "F12"
+                        background_color: root.mat[11]
+                    Button:
+                        id: button13
+                        text: "F13"
+                        background_color: root.mat[12]
+                    Button:
+                        id: button14
+                        text: "F14"
+                        background_color: root.mat[13]
