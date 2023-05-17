@@ -7,9 +7,11 @@ from utils import empty_or_not
 #from skimage.transform import resize
 
 photo = "C:/Users\Irving/Documents/Vision/test_imgs"
-mask = cv2.imread("C:/Users/Irving/Documents/Vision/imgs/mask_v4.png", 0)
+mask = cv2.imread("C:/Users/Irving/Pictures/Saved Pictures/maskv5.png", 0)
 cap = cv2.VideoCapture("C:/Users/Irving/Pictures/Camera Roll/WIN_20230426_18_44_22_Pro.mp4")
 cam = cv2.VideoCapture(0)
+
+#print(np.ndarray(cam))
 
 connected_components = cv2.connectedComponentsWithStats(mask, 4, cv2.CV_32S)
 
@@ -42,6 +44,11 @@ cam.set(cv2.CAP_PROP_POS_FRAMES, frameRate)
 ret, frame = cam.read()
 
 height, width = cam.get(cv2.CAP_PROP_FRAME_HEIGHT), cam.get(cv2.CAP_PROP_FRAME_WIDTH)
+
+#print(height,width)
+
+#filename = "C:/Users/Irving/Pictures/parklot.jpg"
+#cv2.imwrite(filename, frame)
 
 while ret:
 
